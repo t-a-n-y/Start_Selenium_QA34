@@ -49,6 +49,27 @@ public class Start {
     @Test
     public void firstTestRegistrationSuccess(){
 
-//div.login_login__3EHKB :last-child
+        wd = new ChromeDriver();
+        wd.navigate().to("https://contacts-app.tobbymarshall815.vercel.app/home");
+
+        WebElement loginTab = wd.findElement(By.cssSelector("[href='/login']"));
+        loginTab.click();
+
+        WebElement emailTextBox = wd.findElement(By.cssSelector("[placeholder='Email']"));
+        emailTextBox.click();
+        emailTextBox.clear();
+        emailTextBox.sendKeys("tata@gmail.com");
+
+        WebElement passwordTextBox = wd.findElement(By.cssSelector("[placeholder='Password']"));
+        passwordTextBox.click();
+        passwordTextBox.clear();
+        passwordTextBox.sendKeys("Ttata123$");
+
+        WebElement registrationButton = wd.findElement(By.cssSelector("div.login_login__3EHKB :last-child"));
+        registrationButton.click();
+
+        wd.close();
+
+
     }
 }
