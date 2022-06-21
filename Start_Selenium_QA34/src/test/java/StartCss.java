@@ -41,6 +41,50 @@ public class StartCss {
         //vse ostalnie atributu - net spec znachenii
         wd.findElement(By.cssSelector("[href='/home']"));
 
+        //equals
+        wd.findElement(By.cssSelector("[placeholder='Email']"));
+
+        //start with "Em"
+        wd.findElement(By.cssSelector("[placeholder^='Em']"));
+
+        //end on "il"
+        wd.findElement(By.cssSelector("[placeholder$='il']"));
+
+        //contains "ai"
+        wd.findElement(By.cssSelector("[placeholder *='ai]"));
+/////////////////////////////////XPATH///////////////////////////
+
+        //tagname
+        wd.findElement(By.xpath("//div"));
+        wd.findElement(By.xpath("//a"));
+
+        //luboi atribut s @
+        wd.findElement(By.xpath("//*[@href='/home']"));
+
+        //id
+        wd.findElement(By.xpath("//*[@id='root']"));
+        //class
+        wd.findElement(By.xpath("//*[@class='container']"));
+
+        //equals
+        wd.findElement(By.cssSelector("[placeholder='Email']"));
+        wd.findElement(By.xpath("//*[@placeholder='Email']"));
+
+        //start with "Em"
+        wd.findElement(By.cssSelector("[placeholder^='Em']"));
+        wd.findElement(By.xpath("//*[starts-with(@placeholder,'Em')]"));
+
+        //contains "ai"
+        wd.findElement(By.cssSelector("[placeholder *='ai]"));
+        wd.findElement(By.xpath("//*[contains(@placeholder,'ai')"));
+
+
+        //end on "il"
+        wd.findElement(By.cssSelector("[placeholder$='il']"));
+        wd.findElement(By.xpath("//*[contains(@placeholder,'ail')]"));//end netu v xpath
+
+        //poisk po tekstu-----> //a[text()='HOME']
+
 
 
 

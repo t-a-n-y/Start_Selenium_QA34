@@ -4,6 +4,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class Start {
 
     WebDriver wd;
@@ -63,12 +65,15 @@ public class Start {
         WebElement passwordTextBox = wd.findElement(By.cssSelector("[placeholder='Password']"));
         passwordTextBox.click();
         passwordTextBox.clear();
-        passwordTextBox.sendKeys("Ttata123$");
+        passwordTextBox.sendKeys("Ttata120$");
 
-        WebElement registrationButton = wd.findElement(By.cssSelector("div.login_login__3EHKB :last-child"));
-        registrationButton.click();
+       // WebElement registrationButton = wd.findElement(By.cssSelector("div.login_login__3EHKB:last-child"));
+       // WebElement registrationButton = wd.findElement(By.cssSelector("button:last-child"));
+       // List<WebElement> list = wd.findElements(By.cssSelector("button"));
+       // WebElement registrationButton
 
-        wd.close();
+
+
 
 
     }
